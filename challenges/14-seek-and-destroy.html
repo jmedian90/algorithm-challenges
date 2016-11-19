@@ -1,8 +1,11 @@
 <script type="text/javascript">
 // This section is where you'll code the function. ----------
 function destroyer(arr) {
-  // ENTER YOUR CODE HERE
-  return arr;
+  var args = Array.prototype.slice.call(arguments);
+  args.splice(0, 1);
+  return arr.filter(function(element) {
+    return args.indexOf(element) === -1;
+  });
 }
 // end code -------------------------------------------------
 
