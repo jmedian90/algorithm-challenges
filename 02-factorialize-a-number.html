@@ -3,7 +3,9 @@
 function factorialize(num) {
   if (num === 0) { return 1; }
   return num * factorialize(num-1);
-}
+} /* if (num === 0) { return 1; } basically ends the recursion so that 
+the command does not cause a stack overflow. The rest is just multiplying 
+the factorialized value by the initial number as directed.*/
 
 factorialize(5);
 // end code -------------------------------------------------
